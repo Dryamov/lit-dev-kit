@@ -11,7 +11,9 @@
     "lint:lit-analyzer": "lit-analyzer 'src/**/*.ts'",
     "format": "prettier src/**/*.ts --write",
     "analyze": "wca analyze \"src/**/*.ts\" --outFile custom-elements.json",
-    "storybook:serve": "start-storybook -p 6006 --static-dir www"
+    "storybook:serve": "start-storybook -p 6006 --static-dir www",
+    "storybook:build": "build-storybook --static-dir www --output-dir build/app/storybook --no-dll",
+    "storybook:deploy": "storybook-to-ghpages --existing-output-dir build/app/storybook"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,7 @@
     "@storybook/addon-console": "^1.2.1",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
+    "@storybook/storybook-deployer": "^2.8.6",
     "@storybook/theming": "^6.0.21",
     "@storybook/web-components": "^6.0.21",
     "@typescript-eslint/eslint-plugin": "^4.1.0",
@@ -47,5 +50,10 @@
   },
   "dependencies": {
     "lit-element": "^2.4.0"
+  },
+  "storybook-deployer": {
+    "gitUsername": "dryamov",
+    "gitEmail": "dryamov.dev@gmail.com",
+    "commitMessage": "Deploy Storybook to GitHub Pages"
   }
 }
