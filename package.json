@@ -20,5 +20,17 @@
   "bugs": {
     "url": "https://github.com/Dryamov/lit-dev-kit/issues"
   },
-  "homepage": "https://github.com/Dryamov/lit-dev-kit#readme"
+  "homepage": "https://github.com/Dryamov/lit-dev-kit#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "eslint": "^7.8.1",
+    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "lit-analyzer": "^1.2.1",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  }
 }
