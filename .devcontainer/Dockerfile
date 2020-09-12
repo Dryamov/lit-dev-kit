@@ -35,7 +35,8 @@ RUN git clone --quiet https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:
     && git clone --quiet https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search \
     && git clone --quiet https://github.com/lukechilds/zsh-better-npm-completion ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-better-npm-completion \
     && sed -i 's/plugins=(git)/plugins=(git zsh-completions zsh-syntax-highlighting zsh-autosuggestions history-substring-search zsh-better-npm-completion docker docker-compose)/g' ~/.zshrc \
-    && echo 'autoload -U compinit && compinit' >> ~/.zshrc
+    && echo 'autoload -U compinit && compinit' >> ~/.zshrc \
+    && echo 'export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"' >> ~/.zshrc
 SHELL ["zsh", "-c"]
 ENV DEBIAN_FRONTEND=dialog
 ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
