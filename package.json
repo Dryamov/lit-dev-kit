@@ -4,7 +4,13 @@
   "description": "Starting point for development with lit-element",
   "main": "index.js",
   "scripts": {
-    "test": "node -v"
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
+    "lint:eslint": "eslint 'src/**/*.ts'",
+    "lint:lit-analyzer": "lit-analyzer",
+    "format": "prettier src/**/*.ts --write",
+    "analyze": "wca analyze \"src/**/*.ts\" --outFile custom-elements.json"
   },
   "repository": {
     "type": "git",
@@ -28,7 +34,9 @@
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.0",
     "lit-analyzer": "^1.2.1",
-    "typescript": "^4.0.2"
+    "prettier": "^2.1.1",
+    "typescript": "^4.0.2",
+    "web-component-analyzer": "^1.1.6"
   },
   "dependencies": {
     "lit-element": "^2.4.0"
