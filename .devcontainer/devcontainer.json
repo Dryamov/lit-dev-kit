@@ -27,5 +27,6 @@
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	"overrideCommand": false,
 	"remoteUser": "vscode",
-	"mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ]
+	"mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
+	"forwardPorts": [6006],
 }
