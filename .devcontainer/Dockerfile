@@ -12,7 +12,6 @@ ARG ENABLE_NONROOT_DOCKER=true
 ARG SOURCE_SOCKET=/var/run/docker-host.sock
 ARG TARGET_SOCKET=/var/run/docker.sock
 
-ARG NVM_DIR=/usr/local/share/nvm
 ARG NODE_VERSION=lts/*
 ARG UPDATE_RC=true
 
