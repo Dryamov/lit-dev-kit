@@ -2,7 +2,6 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.140.1/containers/debian
 {
 	"name": "Debian 10",
-	"image": "docker.io/dryam/vsc-volume-bootstrap",
 	"build": {
 		"dockerfile": "Dockerfile",
 		// Update 'VARIANT' to pick an Debian version: buster, stretch
