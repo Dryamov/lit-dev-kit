@@ -1,0 +1,24 @@
+{
+  "name": "lit-dev-kit",
+  "version": "0.0.1",
+  "description": "Starting point for development with lit-element",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dryamov/lit-dev-kit.git"
+  },
+  "keywords": [
+    "lit-element",
+    "lit",
+    "storybook"
+  ],
+  "author": "Dryamov Vyacheslav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dryamov/lit-dev-kit/issues"
+  },
+  "homepage": "https://github.com/Dryamov/lit-dev-kit#readme"
+}
