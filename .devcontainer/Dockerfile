@@ -1,5 +1,6 @@
 FROM debian:10
 
+ARG DEBIAN_FRONTEND=noninteractive
 ARG INSTALL_ZSH=true
 ARG USERNAME=vscode
 ARG USER_UID=1000
@@ -11,7 +12,6 @@ ARG ENABLE_NONROOT_DOCKER=true
 ARG SOURCE_SOCKET=/var/run/docker-host.sock
 ARG TARGET_SOCKET=/var/run/docker.sock
 
-ARG NVM_DIR=/usr/local/share/nvm
 ARG NODE_VERSION=lts/*
 ARG UPDATE_RC=true
 
@@ -37,5 +37,6 @@ RUN git clone --quiet https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:
     && sed -i 's/plugins=(git)/plugins=(git zsh-completions zsh-syntax-highlighting zsh-autosuggestions history-substring-search zsh-better-npm-completion docker docker-compose)/g' ~/.zshrc \
     && echo 'autoload -U compinit && compinit' >> ~/.zshrc
 SHELL ["zsh", "-c"]
+ENV DEBIAN_FRONTEND=dialog
 ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
 CMD [ "sleep", "infinity" ]

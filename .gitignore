@@ -1,0 +1,14 @@
+## editors
+/.idea
+/.vscode
+
+## npm
+/node_modules/
+/npm-debug.log
+
+## temp folders
+/.tmp/
+
+# build
+/dist/
+/build/
