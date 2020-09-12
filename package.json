@@ -4,7 +4,14 @@
   "description": "Starting point for development with lit-element",
   "main": "index.js",
   "scripts": {
-    "test": "node -v"
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
+    "lint:eslint": "eslint --fix 'src/**/*.ts'",
+    "lint:lit-analyzer": "lit-analyzer 'src/**/*.ts'",
+    "format": "prettier src/**/*.ts --write",
+    "analyze": "wca analyze \"src/**/*.ts\" --outFile custom-elements.json",
+    "storybook:serve": "start-storybook -p 6006 --static-dir www"
   },
   "repository": {
     "type": "git",
@@ -20,5 +27,25 @@
   "bugs": {
     "url": "https://github.com/Dryamov/lit-dev-kit/issues"
   },
-  "homepage": "https://github.com/Dryamov/lit-dev-kit#readme"
+  "homepage": "https://github.com/Dryamov/lit-dev-kit#readme",
+  "devDependencies": {
+    "@storybook/addon-console": "^1.2.1",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/theming": "^6.0.21",
+    "@storybook/web-components": "^6.0.21",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "eslint": "^7.8.1",
+    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "lit-analyzer": "^1.2.1",
+    "prettier": "^2.1.1",
+    "storybook": "^6.0.21",
+    "typescript": "^4.0.2",
+    "web-component-analyzer": "^1.1.6"
+  },
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  }
 }
