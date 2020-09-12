@@ -1,4 +1,7 @@
 {
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "import", "html"],
     "extends": [
       "eslint:recommended",
       "plugin:@typescript-eslint/eslint-recommended",
@@ -6,12 +9,10 @@
       "plugin:import/errors",
       "plugin:import/warnings"
     ],
-    "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "ecmaVersion": 2020,
       "sourceType": "module"
     },
-    "plugins": ["@typescript-eslint", "import", "html"],
     "rules": {
       "import/no-unresolved": "off",
       "no-unexpected-multiline": "off",

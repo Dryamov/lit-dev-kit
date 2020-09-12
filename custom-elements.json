@@ -2,54 +2,26 @@
   "version": "experimental",
   "tags": [
     {
-      "name": "my-element",
-      "path": "./src/lib/example-lib/my-element.ts",
-      "description": "An example element.",
+      "name": "lit-button",
+      "path": "./src/components/lit-button/lit-button.ts",
       "attributes": [
         {
-          "name": "name",
-          "description": "The name to say \"Hello\" to.",
+          "name": "label",
           "type": "string",
-          "default": "\"World\""
-        },
-        {
-          "name": "count",
-          "description": "The number of times the button has been clicked.",
-          "type": "number",
-          "default": "0"
+          "default": "\"Label\""
         }
       ],
       "properties": [
         {
           "name": "styles",
           "type": "CSSResult",
-          "default": "\"css`\\n    :host {\\n      display: block;\\n      border: solid 1px gray;\\n      padding: 16px;\\n      max-width: 800px;\\n    }\\n  `\""
+          "default": "\"css`\\n    :host {\\n      border: solid 1px gray;\\n      color: red;\\n    }\\n  `\""
         },
         {
-          "name": "name",
-          "attribute": "name",
-          "description": "The name to say \"Hello\" to.",
+          "name": "label",
+          "attribute": "label",
           "type": "string",
-          "default": "\"World\""
-        },
-        {
-          "name": "count",
-          "attribute": "count",
-          "description": "The number of times the button has been clicked.",
-          "type": "number",
-          "default": "0"
-        }
-      ],
-      "slots": [
-        {
-          "name": "",
-          "description": "This element has a slot"
-        }
-      ],
-      "cssParts": [
-        {
-          "name": "button",
-          "description": "The button"
+          "default": "\"Label\""
         }
       ]
     }

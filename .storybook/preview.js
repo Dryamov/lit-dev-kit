@@ -2,6 +2,10 @@ import { storiesOf } from '@storybook/web-components';
 import '@storybook/addon-console';
 import { setConsoleOptions } from '@storybook/addon-console';
 import { themes } from '@storybook/theming';
+import { setCustomElements } from '@storybook/web-components';
+import customElements from '../custom-elements.json';
+
+setCustomElements(customElements);
 
 const STORYBOOK_THEME = process.env.STORYBOOK_THEME
 
