@@ -6,6 +6,7 @@
       "declaration": true,
       "declarationMap": true,
       "sourceMap": true,
+      "skipLibCheck": true,
       "outDir": "./build",
       "rootDir": "./components",
       "strict": true,
@@ -24,6 +25,6 @@
         }
       ]
     },
-    "include": ["components/**/*.ts"],
+    "include": ["components/*/*.ts"],
     "exclude": []
   }
