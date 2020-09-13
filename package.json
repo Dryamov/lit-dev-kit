@@ -30,6 +30,11 @@
     "storybook:deploy": "storybook-to-ghpages --existing-output-dir build/app/storybook",
     "storybook:serve": "start-storybook -p 6006 --static-dir www"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
+  },
   "dependencies": {
     "@storybook/addon-docs": "^6.0.21",
     "lit-element": "^2.4.0"
@@ -58,10 +63,5 @@
     "gitUsername": "dryamov",
     "gitEmail": "dryamov.dev@gmail.com",
     "commitMessage": "Deploy Storybook to GitHub Pages"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run format"
-    }
   }
 }

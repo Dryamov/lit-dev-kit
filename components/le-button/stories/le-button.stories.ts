@@ -9,9 +9,7 @@ export default {
 
 export const Base = ({showIcon, isDisabled, label}): TemplateResult =>
   html`
-    <le-button showIcon=${showIcon} ?disabled=${isDisabled}
-      >${label}</le-button
-    >
+    <le-button showIcon=${showIcon} ?disabled=${isDisabled}>${label}</le-button>
   `;
 Base.args = {showIcon: false, isDisabled: false, label: 'Simple'};
 console.log(typeof Base);
