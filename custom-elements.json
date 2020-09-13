@@ -2,6 +2,10 @@
   "version": "experimental",
   "tags": [
     {
+      "name": "le-button",
+      "path": "./components/le-button/le-button.ts"
+    },
+    {
       "name": "lit-open-wc",
       "path": "./components/lit-open-wc/lit-open-wc.ts",
       "attributes": [

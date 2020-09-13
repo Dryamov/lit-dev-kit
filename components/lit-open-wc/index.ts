@@ -1,1 +1,1 @@
-export { LitOpenWc } from './src/LitOpenWc';
+export {LitOpenWc} from './src/LitOpenWc';

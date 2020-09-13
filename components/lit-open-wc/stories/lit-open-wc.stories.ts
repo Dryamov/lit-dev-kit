@@ -6,7 +6,11 @@ export default {
   title: 'lit-open-wc',
 };
 
-export const App = ():TemplateResult =>
+export const Base = (): TemplateResult =>
   html`
     <lit-open-wc></lit-open-wc>
   `;
+
+export const CustomTitle = (): TemplateResult => html`
+<lit-open-wc title="Hello World"></lit-open-wc>
+`;
