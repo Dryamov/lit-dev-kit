@@ -46,6 +46,7 @@
     "eslint": "^7.8.1",
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.0",
+    "husky": "^4.3.0",
     "lit-analyzer": "^1.2.1",
     "prettier": "^2.1.1",
     "prettier-plugin-packagejson": "^2.2.5",
@@ -57,5 +58,10 @@
     "gitUsername": "dryamov",
     "gitEmail": "dryamov.dev@gmail.com",
     "commitMessage": "Deploy Storybook to GitHub Pages"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
   }
 }
