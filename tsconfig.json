@@ -7,7 +7,7 @@
       "declarationMap": true,
       "sourceMap": true,
       "outDir": "./build",
-      "rootDir": "./src",
+      "rootDir": "./components",
       "strict": true,
       "noUnusedLocals": true,
       "noUnusedParameters": true,
@@ -24,6 +24,6 @@
         }
       ]
     },
-    "include": ["src/**/*.ts"],
+    "include": ["components/**/*.ts"],
     "exclude": []
   }

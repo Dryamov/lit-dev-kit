@@ -75,7 +75,7 @@ export const parameters = {
   },
 }
 
-const req = require.context('../src', true, /\.stories\.(js|jsx|ts|tsx|mdx)$/);
+const req = require.context('../components', true, /\.stories\.(js|jsx|ts|tsx|mdx)$/);
 storiesOf(req, module)
 if (module.hot) {
   module.hot.accept(req.id, () => {
