@@ -1,8 +1,7 @@
-import { LitElement, html, css, property, TemplateResult } from 'lit-element';
-import { openWcLogo } from './open-wc-logo';
+import {LitElement, html, css, property, TemplateResult} from 'lit-element';
+import {openWcLogo} from './open-wc-logo';
 
 export class LitOpenWc extends LitElement {
-
   @property({type: String}) page = 'main';
 
   @property({type: String}) title = '';
@@ -49,7 +48,7 @@ export class LitOpenWc extends LitElement {
     }
   `;
 
-  render():TemplateResult {
+  render(): TemplateResult {
     return html`
       <main>
         <div class="logo">${openWcLogo}</div>

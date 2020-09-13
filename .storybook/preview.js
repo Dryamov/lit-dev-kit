@@ -1,13 +1,13 @@
-import { storiesOf } from '@storybook/web-components';
+import {storiesOf} from '@storybook/web-components';
 import '@storybook/addon-console';
-import { setConsoleOptions } from '@storybook/addon-console';
-import { themes } from '@storybook/theming';
-import { setCustomElements } from '@storybook/web-components';
+import {setConsoleOptions} from '@storybook/addon-console';
+import {themes, create} from '@storybook/theming';
+import {setCustomElements, addParameters} from '@storybook/web-components';
 import customElements from '../custom-elements.json';
 
 setCustomElements(customElements);
 
-const STORYBOOK_THEME = process.env.STORYBOOK_THEME
+const STORYBOOK_THEME = process.env.STORYBOOK_THEME;
 
 const customViewports = {
   responsive: {
@@ -43,40 +43,53 @@ const customViewports = {
 const customBackgrounds = [
   {
     name: 'dark',
-    value: '#333333'
+    value: '#333333',
   },
   {
     name: 'light',
-    value: '#F8F8F8'
+    value: '#F8F8F8',
   },
   {
     name: 'twitter',
-    value: '#00aced'
+    value: '#00aced',
   },
   {
     name: 'facebook',
-    value: '#3b5998'
-  }];
+    value: '#3b5998',
+  },
+];
 
 setConsoleOptions({
   panelExclude: [/\[HMR\]/],
   log: '📜 Log',
   warn: '⚠️ Warning',
-  error: '❌ Error'
+  error: '❌ Error',
+});
+
+addParameters({
+  docs: {
+    inlineStories: false,
+  },
+  enableShortcuts: false,
+  docsMode: true,
 });
 
 export const parameters = {
-  controls: { expanded: true },
-  viewport: { viewports: customViewports },
-  backgrounds: { values: customBackgrounds },
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {expanded: true},
+  viewport: {viewports: customViewports},
+  backgrounds: {values: customBackgrounds},
+  actions: {argTypesRegex: '^on[A-Z].*'},
   docs: {
     theme: themes[STORYBOOK_THEME],
   },
-}
+};
 
-const req = require.context('../components', true, /\.stories\.(js|jsx|ts|tsx|mdx)$/);
-storiesOf(req, module)
+const req = require.context(
+  '../components',
+  true,
+  /\.stories\.(js|jsx|ts|tsx|mdx)$/
+);
+storiesOf(req, module);
 if (module.hot) {
   module.hot.accept(req.id, () => {
     const currentLocationHref = window.location.href;

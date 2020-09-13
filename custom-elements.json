@@ -3,7 +3,44 @@
   "tags": [
     {
       "name": "le-button",
-      "path": "./components/le-button/le-button.ts"
+      "path": "./components/le-button/le-button.ts",
+      "attributes": [
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "showIcon",
+          "type": "string",
+          "default": "\"Cross\""
+        },
+        {
+          "name": "foo-bar",
+          "type": "string",
+          "default": "\"Loading\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "isDisabled",
+          "attribute": "isDisabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "showIcon",
+          "attribute": "showIcon",
+          "type": "string",
+          "default": "\"Cross\""
+        },
+        {
+          "name": "label",
+          "attribute": "foo-bar",
+          "type": "string",
+          "default": "\"Loading\""
+        }
+      ]
     },
     {
       "name": "lit-open-wc",

@@ -2,34 +2,38 @@
   "name": "lit-dev-kit",
   "version": "0.0.1",
   "description": "Starting point for development with lit-element",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
-    "lint:eslint": "eslint --fix 'components/**/*.ts'",
-    "lint:lit-analyzer": "lit-analyzer 'components/**/*.ts'",
-    "format": "prettier components/**/*.ts --write",
-    "analyze": "wca analyze \"components/**/*.ts\" --outFile custom-elements.json",
-    "storybook:serve": "start-storybook -p 6006 --static-dir www",
-    "storybook:build": "build-storybook --static-dir www --output-dir build/app/storybook --no-dll",
-    "storybook:deploy": "storybook-to-ghpages --existing-output-dir build/app/storybook"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dryamov/lit-dev-kit.git"
-  },
   "keywords": [
     "lit-element",
     "lit",
     "storybook"
   ],
-  "author": "Dryamov Vyacheslav",
-  "license": "ISC",
+  "homepage": "https://github.com/Dryamov/lit-dev-kit#readme",
   "bugs": {
     "url": "https://github.com/Dryamov/lit-dev-kit/issues"
   },
-  "homepage": "https://github.com/Dryamov/lit-dev-kit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dryamov/lit-dev-kit.git"
+  },
+  "license": "ISC",
+  "author": "Dryamov Vyacheslav",
+  "main": "index.js",
+  "scripts": {
+    "analyze": "wca analyze \"components/**/*.ts\" --outFile custom-elements.json",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "format": "prettier --check --write  --loglevel log . ",
+    "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
+    "lint:eslint": "eslint --fix 'components/**/*.ts'",
+    "lint:lit-analyzer": "lit-analyzer 'components/**/*.ts'",
+    "storybook:build": "build-storybook --static-dir www --output-dir build/app/storybook --no-dll",
+    "storybook:deploy": "storybook-to-ghpages --existing-output-dir build/app/storybook",
+    "storybook:serve": "start-storybook -p 6006 --static-dir www"
+  },
+  "dependencies": {
+    "@storybook/addon-docs": "^6.0.21",
+    "lit-element": "^2.4.0"
+  },
   "devDependencies": {
     "@storybook/addon-console": "^1.2.1",
     "@storybook/addon-essentials": "^6.0.21",
@@ -44,13 +48,10 @@
     "eslint-plugin-import": "^2.22.0",
     "lit-analyzer": "^1.2.1",
     "prettier": "^2.1.1",
+    "prettier-plugin-packagejson": "^2.2.5",
     "storybook": "^6.0.21",
     "typescript": "^4.0.2",
     "web-component-analyzer": "^1.1.6"
-  },
-  "dependencies": {
-    "@storybook/addon-docs": "^6.0.21",
-    "lit-element": "^2.4.0"
   },
   "storybook-deployer": {
     "gitUsername": "dryamov",

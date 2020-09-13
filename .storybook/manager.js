@@ -1,7 +1,7 @@
-import { addons } from '@storybook/addons';
-import { themes } from '@storybook/theming';
+import {addons} from '@storybook/addons';
+import {themes} from '@storybook/theming';
 
-const STORYBOOK_THEME=process.env.STORYBOOK_THEME
+const STORYBOOK_THEME = process.env.STORYBOOK_THEME;
 addons.setConfig({
   isFullscreen: false,
   showNav: true,
